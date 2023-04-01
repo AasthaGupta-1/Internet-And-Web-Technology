@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--25. Create a user registration form which accepts first name, last name, user ID, 
+password, confirm password, Address, Email ID, Contact number. Apply appropriate 
+client side validations using JavaScript for all fields of html form. Also layout this 
+form using a CSS.-->
+<html>
+    <head>
+        <title>
+            Registration Form
+        </title>
+         </head>
+        <body align="center">
+            <form onsubmit="return validate()">
+                Enter First Name :
+                <input type='text' onclick="change(0)"><br><br>
+                Enter Last Name :
+                <input type='text' onclick="change(1)"><br><br>
+                Enter User ID : 
+                <input type='text' onclick="change(2)"><br><br>
+                Enter Password : 
+                <input type='password' onclick="change(3)"><br><br>
+                Confirm Password : 
+                <input type='password' onclick="change(4)"><br><br>
+                Enter Address : 
+                <input type='text' onclick="change(5)"><br><br>
+                Enter email Address : 
+                <input type='text' onclick="change(6)"><br><br>
+                Enter Contact Number :  
+                <input type='text' onclick="change(7)"><br><br>
+                <button>Submit</button>
+            </form>
+            <script type="text/javascript">
+                function validate(){
+                    fname=document.forms[0].elements[0].value;
+                    lname=document.forms[0].elements[1].value;
+                    uid=document.forms[0].elements[2].value;
+                    pass=document.forms[0].elements[3].value;
+                    cpass=document.forms[0].elements[4].value;
+                    add=document.forms[0].elements[5].value;
+                    email=document.forms[0].elements[6].value;
+                    pno=document.forms[0].elements[7].value;
+                    fnamep=/^[a-z A-Z]{2,20}$/;
+                    lnamep=/^[a-z A-Z]{2,20}$/;
+                    uid_p=/^[a-z A-Z]{5}[0-9]{5}$/;
+                    passp=/^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[@#$%^&*_+><]){8,16}$/;
+                    emailp=/ ^\w+@[a-zA-Z]+?\.[a-zA-Z]{2,3}$/;
+                    //email_p=/^[a-z A-Z][a-z A-Z 0-9]{}$/+/@[a-z A-Z]\.[a-z A-Z]$/;
+                    pnop=/^[1-9][0-9]{9}$/;
+                    if(!fnamep.test(fname)){
+                        
+                        colorerr("Invalid First Name .",0);
+                        return false;
+                    }
+                    else if(lname!="" && !lnamep.test(lname)){
+                        colorerr("Invalid lastname .",1);
+                        return false;
+                    }
+                    else if(!uid_p.test(uid)){
+                        colorerr("Invalid User ID",2);
+                        return false;
+                    }
+                    else if(!passp.test(pass)){
+                        colorerr("Invalid Password .",3);
+                        return false;
+                    }
+                    else if(pass!=cpass){
+                        colorerr("Wrong Confirmation of password .",4);
+                        return false;
+                    }
+                    else if(!emailp.test(email)){
+                        colorerr("Invalid Email",6);
+                        return false;
+                    }
+                    else if(!pnop.test(pno)){
+                        colorerr("Invalid Phone no .",7);
+                        return false;
+                    }
+                    else{
+                    return true;
+                    }
+                    return true;
+                }
+                function colorerr(msg,i){
+                        alert(msg);
+                        document.forms[0].elements[i].style.borderColor="red";
+                        document.forms[0].elements[i].style.backgroundColor="rgba(238, 113, 113, 0.657)";
+                }
+                function change(i){ 
+                    document.forms[0].elements[i].style.borderColor="black";
+                    document.forms[0].elements[i].style.backgroundColor="white";
+                     
+                }
+            </script>
+        </body>
+   
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--10.	Create an autocomplete input element with an associated datalist that contains the days
+     of the week.-->
+     <html>
+        <head>
+            <title>Days</title>
+        </head>
+        <body>
+            <h1>Days Input</h1>
+            <form>
+                <label>Days :</label>
+                <input type="text" name="day" autocomplete="on" list="1" />
+                <datalist id="1" name="day">
+                    <option value="Sunday">Sunday</option>
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                </datalist>
+                <br><br>
+                <input type="submit" />
+                <input type="reset" />
+            </form>
+        </body>   
+     </html>

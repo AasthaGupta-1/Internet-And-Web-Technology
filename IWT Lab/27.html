@@ -1,0 +1,48 @@
+<!--27. Create a Webpage to display digital clock that display updated time of your system 
+without refreshing webpage. -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Digital Clock</title>
+        <style>
+            body{
+                background-color: beige;
+            }
+            #clock{
+                height: 100px;
+                width:100%;
+                background-color: aquamarine;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="clock"></div>
+        <script type="text/javascript">
+        function clock()
+        {
+            d=new Date();
+            hh=d.getHours();
+            mm=d.getMinutes();
+            ss=d.getSeconds();
+            if(hh<10)
+            {
+                hh='0'+hh;
+            }
+            if(mm<10)
+            {
+                mm='0'+mm;
+            }
+            if(ss<10)
+            {
+                ss='0'+ss;
+            }
+            
+            t=hh+":"+mm+":"+ss;
+            block=document.getElementById("clock");
+            block.innerHTML=t;
+        }
+        setInterval(clock,1000);
+        </script>
+    </body>
+</html>

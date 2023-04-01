@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--30. Write a script that plays a “guess the number” game as follows: Your program 
+chooses the number to be guessed by selecting a random integer in the range 1 to 
+1000. The script displays the prompt Guess a number between 1 and 1000 next to a 
+text field. The player types a first guess in to the text field and clicks a button to 
+submit the guess to the script. If the player's guess is incorrect, your program should 
+display Too high. Try again. or Too low. Try again. to help the player “zero in” on the 
+correct answer and should clear the text field so the user can enter the next guess. 
+When the user enters the correct answer, display Congratulations. You guessed the 
+number! and clear the text field so the user can play again.-->
+<html>
+    <head>
+        <title>Guessing Game</title>
+        <style>
+            h1{
+                font-size:100px;
+                color: rgb(138, 92, 33);
+                background-color: rgb(237, 237, 114);
+            }
+            input{
+                height: 100px;
+                width:500px;
+                background-color: aquamarine;
+                font-size:30px;
+            }
+            button{
+                height: 100px;
+                width:200px;
+                font-size:30px;
+                background-color: bisque;
+            }
+        </style>
+    </head>
+    <body>
+        <form method="get" id="f1" onsubmit="return check()">
+            <input type='text' name='number' placeholder='Guess a number between 1 and 1000 '>
+            <button >Submit</button>
+        </form>
+        <script type="text/javascript">   
+            function rand(){
+                return Math.floor(Math.random()*(1000)+1);
+            }
+            z=rand();
+            m=0;
+            function check(){
+            x=document.forms[0].elements[0].value;
+            if(z>x){
+                alert("You number is low.");
+                m++;
+            }
+            if(x>z){
+                alert("Your number is high.");
+                m++;
+            }
+            if(x==z){
+                document.write("<h1>Congratulations you guess the correct number .</h1>");
+                m++;
+                document.write("<h1>Your Score is : "+m+"</h1>");
+                return true;
+            }
+            return false;
+            }
+        </script>
+    </body>
+</html>

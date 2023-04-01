@@ -1,0 +1,210 @@
+<!--20. Implement a one page personal website to present your resume. 
+    Design of the webpage should be like given example.
+https://sachagreif.com/
+Your webpage should also have a navigation menu.
+-->
+<html>
+    <head>
+        <title>
+            Aastha Gupta
+        </title>
+        <style>
+            div{
+                height:730px;
+                width:100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                position:relative;
+                z-index:0;
+            }
+            #A1{         
+                background-image: url(ppt1.webp);
+            }
+            #A2{         
+                background-image: url(ppt2.jfif);
+            }
+            #A3{         
+                background-image: url(ppt3.jpg.crdownload);
+            }
+            #A4{         
+                background-image: url(ppt4.jfif);
+            }
+            #A5{         
+                background-image: url(ppt5.jfif);
+            }
+            #A6{         
+                background-image: url(ppt6.avif);
+            }
+            #A7{         
+                background-image: url(ppt7.avif);
+            }
+            div > div{
+                height:480px;
+                width:1200px;
+                background-color: rgb(238, 224, 199);
+                z-index:1;
+                box-shadow:10px 10px 5px black;
+                border:solid 5px black;
+                position:absolute;
+                top:100px;
+                left:120px;
+            }
+            p{
+                color:black;
+                font-family: Arial, Helvetica, sans-serif;
+                position:absolute;
+                
+            }
+            
+            #p0{
+                left:100px;
+                font-size:30px;
+                top:100px;
+                right:100px;
+            }
+            #p1{
+                font-size:20px;
+                width: 450px;
+                height:500px;
+                top:150px;
+                left:100px;
+            }
+            #p2{
+                font-size:20px;
+                top:150px;
+                left:600px;
+                width: 450px;
+                height:500px;
+            }
+
+            #i3{
+                left:520px;
+            }
+            #i4{
+                left:590px;
+            }
+            .icon{
+                
+                height:50px;
+                width:50px;
+                border-radius:60%;
+                position:absolute;
+                bottom:90px;
+                z-index:2;
+            }
+            .logo{
+                height:100px;
+                width:100px;
+                border-radius:60%;
+                position:absolute;
+                z-index:2;
+            }
+            #i1{
+                margin-top:60px;
+                margin-left:45%;
+            }
+            #i2{
+                top:150px;
+                left:80px;
+            }
+            h1{
+                position: absolute;
+                top:10px;
+                left:100px;
+                font-size:70px;  
+            }
+            b{
+                font-size:30px;
+                color:brown;
+            }
+            hr{ 
+                width:400px;
+                position:absolute;
+                bottom:100px;
+            }
+            #hr1{
+                left:100px;
+            }
+            #hr2{
+                left:660px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="A1">
+            <img src="aas logo.webp" class="logo" id="i1">
+            <div>
+                <p id="p0">I <b>Aastha Gupta</b>, a keen learner with genuine interest in coding. I have good team work  
+                    qualities which i have shown throughout my acedemic career.
+                    I have learnt to never quit</p>
+                <hr width="10px" id="hr1">
+                <a href="http://instagram.com/sachagreif"><img src="insta.png" class="icon" id="i3"></a>
+                <a href="http://instagram.com/sachagreif"><img src="lin.png" class="icon" id="i4"></a>
+                <hr width="10px" id="hr2">
+            </div>
+        </div>
+        <div id="A2">
+            <img src="bi.png" class="logo" id="i2">
+            <div>
+                <h1>Bio</h1>
+                <p id="p1"><b>Adress</b><br><br>Moradabad,UP<br><br>
+                <b>Email </b><br><br>btbti20208_aastha@banasthali.in
+                </p>
+                    <p id="p2"><b>Phone No</b><br><br>9876543210</p>
+            </div>
+        </div>
+        <div id="A6">
+            <img src="pod.png" class="logo" id="i2">
+            <div>
+                <h1>Educational History</h1>
+                <p id="p1">
+                    <b>All India Secondary School Examinations</b>
+                    <br><br>Shri Sai Public School (2017 - 2018)<br><br>
+                    <b>All India Senior School Certificate Examination</b>
+                    <br><br>Shri Sai Public School (2019 - 2020)</p>
+                    
+                    
+                <p id="p2"><b>Bachelor of Technology<br>(Information Technology)</b><br><br>
+                    Banasthali Vidhyapith,Rajasthan (2020-present)</p>
+                
+            </div>
+        </div>
+        <div id="A3">
+            <img src="cod.jfif" class="logo" id="i2">
+            <div >
+                <h1>Skills</h1>
+                <p id="p1"><b>OOP</b><br><br>
+                   <b>JAVA , C++</b><br><br>
+                   <b>HTML , CSS , JavaScript</b>
+                    
+                </p>
+                    <p id="p2"><b>Data Structure And Algorithms</b><br><br>
+                    <b>Networking</b>
+                    <b>AI and ML</b></p>
+            </div>
+        </div>
+        <div id="A4">
+            <img src="pro.png" class="logo" id="i2">
+            <div >
+                <h1>Projects</h1>
+                <p id="p1"><b>Plant Disease Detection</b><br><br>
+                In this project CNN models are trained with the help of Plant Village Dataset . Then those trained models are used to predict disease in plants .
+            </p>
+                    <p id="p2"><b>Clone Of Netflix Website  </b><br><br>
+                    In this project I have built a website which is clone of Netflix Website .</p>
+            </div>
+        </div>
+        <div id="A5">
+            <img src="writing.png" class="logo" id="i2">
+            <div>
+                <h1>Interests</h1>
+                <p id="p1"><b>Problem Solving</b><br><br>
+                <b>Coding</b><br><br>
+                <b>Graphic Designing</b><br><br>
+                <b>Sketch Making</b></p>
+                    
+            </div>
+        </div>
+        
+    </body>
+</html>
